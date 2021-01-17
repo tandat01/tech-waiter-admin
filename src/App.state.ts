@@ -5,6 +5,7 @@ import {TagState} from './features/tag/state';
 import {BannerState} from './features/banner/state';
 import {CustomerState} from './features/customer/state';
 import {UserState} from './features/user/state';
+import {ContactMessageState} from './features/contact-message/state';
 
 interface AppState {
     auth: AuthState;
@@ -14,6 +15,7 @@ interface AppState {
     banner: BannerState;
     customer: CustomerState;
     user: UserState;
+    contactMessage: ContactMessageState
 }
 
 export default AppState;

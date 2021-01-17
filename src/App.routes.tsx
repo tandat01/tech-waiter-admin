@@ -4,8 +4,10 @@ import {lazy} from 'react';
 import {
     CarOutlined,
     DashboardOutlined,
+    DollarOutlined,
     OrderedListOutlined,
-    UserSwitchOutlined, UserOutlined
+    UserOutlined,
+    UserSwitchOutlined
 } from '@ant-design/icons';
 import MiddleContentLayout from './layouts/middle-content-layout';
 import {RouterEnum} from './common/enums';
@@ -43,6 +45,25 @@ const appRoutes: Routes = [
                     menuDisplay: true,
                     icon: DashboardOutlined
                 }
+            },
+            {
+                path: RouterEnum.orders,
+                data: {
+                    title: 'Quản lý đơn',
+                    menuType: MenuType.SUBMENU,
+                    menuDisplay: true,
+                    icon: DollarOutlined
+                },
+                children: [
+                    {
+                        path: `${RouterEnum.orders}${list}`,
+                        component: lazy(() => import('./features/contact-message/Table')),
+                        data: {
+                            title: 'DS Order',
+                            menuDisplay: true
+                        }
+                    }
+                ]
             },
             {
                 path: RouterEnum.categories,

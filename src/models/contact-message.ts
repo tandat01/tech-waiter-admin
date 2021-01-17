@@ -1,16 +1,15 @@
-import { Customer } from './customer';
-import { ContactMessageStatus } from './enums/contact-message-status';
+import {OrderDetail} from './order-detail';
+import {Customer} from './customer';
 
 export interface ContactMessage {
     id: number;
-    subject: string;
+    total_price: number;
+    created_by_id: number;
+    updated_by_id: number;
     customer_id: number;
-    customer?: Customer;
-    email?: string|null;
-    message: string;
-    read: boolean;
-    notified: boolean;
-    status: ContactMessageStatus;
+    status: number;
     created_at: string;
     updated_at: string;
+    order_details: OrderDetail[];
+    customer?: Customer;
 }

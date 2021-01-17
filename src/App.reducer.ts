@@ -6,6 +6,7 @@ import tag from './features/tag/reducer';
 import banner from './features/banner/reducer';
 import customer from './features/customer/reducer';
 import user from './features/user/reducer';
+import contactMessage from './features/contact-message/reducer';
 
 const AppReducer = combineReducers({
     auth,
@@ -14,7 +15,8 @@ const AppReducer = combineReducers({
     tag,
     banner,
     customer,
-    user
+    user,
+    contactMessage
 });
 
 export default AppReducer;

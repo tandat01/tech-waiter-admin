@@ -7,6 +7,7 @@ import tagSagas from './features/tag/sagas';
 import bannerSagas from './features/banner/sagas';
 import customerSagas from './features/customer/sagas';
 import userSagas from './features/user/sagas';
+import contactMessageSagas from './features/contact-message/sagas';
 
 function* AppSagas() {
     yield all([
@@ -18,6 +19,7 @@ function* AppSagas() {
         bannerSagas(),
         customerSagas(),
         userSagas(),
+        contactMessageSagas(),
     ]);
 }
 
